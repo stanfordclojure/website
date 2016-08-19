@@ -3,10 +3,12 @@
             [cs95.components.bootstrap :as bs]
             [cs95.components.frame :as frame]
             [cs95.views.todo :as todo]
+            [cs95.views.candy :as candy]
             [cs95.views.landing :as landing])
   (:require-macros [cs95.utils.re-frame :refer [with-subs]]))
 
 (defmulti panels identity)
+(defmethod panels :candy [] [candy/view])
 (defmethod panels :home [] [landing/view])
 (defmethod panels :syllabus [] [todo/view])
 (defmethod panels :assignments [] [todo/view])
@@ -17,7 +19,8 @@
   [{:event-key :home :href "#/" :title "Overview"}
    {:event-key :syllabus :href "#/syllabus" :title "Syllabus"}
    {:event-key :assignments :href "#/assignments" :title "Assignments"}
-   {:event-key :resources :href "#/resources" :title "Resources"}])
+   {:event-key :resources :href "#/resources" :title "Resources"}
+   {:event-key :candy :href "#/candy" :title "Candy"}])
 
 
 (defn main-panel []

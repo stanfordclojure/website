@@ -30,6 +30,9 @@
   (defroute "/resources" []
     (re-frame/dispatch [:set-active-panel :resources]))
 
+  (defroute "/candy" []
+    (re-frame/dispatch [:set-active-panel :candy]))
+
 
   ;; --------------------
   (hook-browser-navigation!))
