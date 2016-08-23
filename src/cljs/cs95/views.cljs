@@ -4,14 +4,16 @@
             [cs95.components.alert :as alert]
             [cs95.components.frame :as frame]
             [cs95.views.todo :as todo]
-            [cs95.views.landing :as landing])
-  (:require-macros [cs95.utils.re-frame :refer [with-subs]]))
+            [cs95.views.landing :as landing]
+            [cs95.views.markdown :as markdown])
+  (:require-macros [cs95.utils.re-frame :refer [with-subs]]
+                   [cs95.utils.helper :refer [slurp-dep]]))
 
 (defmulti panels identity)
 (defmethod panels :home [] [landing/view])
-(defmethod panels :syllabus [] [todo/view])
+(defmethod panels :syllabus [] [markdown/view (slurp-dep "./doc/todo.md")])
 (defmethod panels :assignments [] [todo/view])
-(defmethod panels :resources [] [todo/view])
+(defmethod panels :resources [] [markdown/view (slurp-dep "./doc/todo.md")])
 (defmethod panels :default [] [:div])
 
 (def panel-data
