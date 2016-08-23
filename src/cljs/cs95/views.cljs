@@ -1,6 +1,7 @@
 (ns cs95.views
   (:require [re-frame.core :as re-frame]
             [cs95.components.bootstrap :as bs]
+            [cs95.components.alert :as alert]
             [cs95.components.frame :as frame]
             [cs95.views.todo :as todo]
             [cs95.views.landing :as landing])

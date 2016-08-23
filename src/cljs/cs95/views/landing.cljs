@@ -1,5 +1,6 @@
 (ns cs95.views.landing
   (:require [re-frame.core :as re-frame]
+            [cs95.components.alert :as alert]
             [cs95.components.bootstrap :as bs]))
 
 (defn clj-logo [style]
@@ -33,6 +34,13 @@
 
 (defn view []
   [:div
+   [alert/show
+    {:bs-style 'danger}
+    [:div
+     [:p {:style {:font-size 30}}
+      "Apply " [:a {:href "https://goo.gl/forms/lrjddAU1xGFTOFeC3"
+                    :target "_blank"} "here"] "!"]
+     [:p {:style {:font-size 20}} "Application due September 30."]]]
    [page-header]
    [course-description]
    [:hr]

@@ -16,7 +16,8 @@
    "Image"
    "Table"
    "Panel"
-   "ListGroup" "ListGroupItem"])
+   "ListGroup" "ListGroupItem"
+   "Alert"])
 
 (defn vspace [height]
   [:div {:style {:height height}}])
