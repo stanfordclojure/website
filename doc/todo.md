@@ -10,3 +10,6 @@ continue to take inspiration from:
 - http://callbackjs.me/
 - http://stanfordpython.com/
 etc.
+
+Use https://github.com/gnab/remark for the slides.
+v1 syllabus is here: https://docs.google.com/document/d/1Mt7a5Rjgc0o2BQTzr7qyibIhRvdTdg38PXr0438dpXY/edit

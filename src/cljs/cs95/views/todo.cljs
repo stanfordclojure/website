@@ -3,5 +3,5 @@
             [cs95.components.bootstrap :as bs]))
 
 (defn view []
-  [:h1 "TODO"])
+  [:h1 "Coming soon!"])
 

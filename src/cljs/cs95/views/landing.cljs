@@ -27,7 +27,7 @@
     [:h3 "Class Time and Location"]
     [:p "Fall quarter (September - December, 2016)"]
     [:p "Lecture: Tuesday, Thursday 4:30-5:50"]
-    [:p "Location: TBD"]]
+    [:p "Location: Bldg. 160 Rm. 319"]]
    [bs/Col {:md 6}
     [:h3 "Office Hours"]
     [:p "TBD"]]])

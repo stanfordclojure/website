@@ -11,9 +11,9 @@
 
 (defmulti panels identity)
 (defmethod panels :home [] [landing/view])
-(defmethod panels :syllabus [] [markdown/view (slurp-dep "./doc/todo.md")])
+(defmethod panels :syllabus [] [todo/view])
 (defmethod panels :assignments [] [todo/view])
-(defmethod panels :resources [] [markdown/view (slurp-dep "./doc/todo.md")])
+(defmethod panels :resources [] [markdown/view (slurp-dep "./doc/resources.md")])
 (defmethod panels :default [] [:div])
 
 (def panel-data
