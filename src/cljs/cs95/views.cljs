@@ -11,7 +11,7 @@
 
 (defmulti panels identity)
 (defmethod panels :home [] [landing/view])
-(defmethod panels :syllabus [] [todo/view])
+(defmethod panels :syllabus [] [markdown/view (slurp-dep "./doc/syllabus.md")])
 (defmethod panels :assignments [] [todo/view])
 (defmethod panels :resources [] [markdown/view (slurp-dep "./doc/resources.md")])
 (defmethod panels :default [] [:div])
@@ -19,7 +19,7 @@
 (def panel-data
   [{:event-key :home :href "#/" :title "Overview"}
    {:event-key :syllabus :href "#/syllabus" :title "Syllabus"}
-   {:event-key :assignments :href "#/assignments" :title "Assignments"}
+   #_{:event-key :assignments :href "#/assignments" :title "Assignments"}
    {:event-key :resources :href "#/resources" :title "Resources"}])
 
 
