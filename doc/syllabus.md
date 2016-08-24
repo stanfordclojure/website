@@ -13,7 +13,7 @@ CS95 Syllabus
 - Explore the power of Lisp
   - Macros
   - Flexibility among read time vs. compile time vs. runtime.
-  - (loop (print (eval (read)))
+  - `(loop (print (eval (read)))`
 - Interop with libraries written in host VM
   - Leverage all existing Java/Javascript libraries from Clojure
 
@@ -34,7 +34,6 @@ Items 1 through 10 below represent each week of the quarter. There will be two 8
             - Readings:
                 - http://www.paulgraham.com/avg.html
                 - http://www.paulgraham.com/diff.html
-
     - Why Clojure?
         - **Immutability** and **Functional Programming**
             - **Simplicity**
@@ -70,7 +69,6 @@ Items 1 through 10 below represent each week of the quarter. There will be two 8
         - Scope
         - Destructuring
         - Namespaces (bleeds into lab)
-
     - Clojure builtins
         - Programming to the *sequence abstraction*! (using truly polymorphic dispatch!)
             - `map`, `filter`, `reduce`, `some`, `first`, `rest`, `cons`, `conj` etc. work on vectors, maps, lists, and anything else that implements the sequence interface
@@ -124,8 +122,7 @@ Items 1 through 10 below represent each week of the quarter. There will be two 8
 5. Lisp!
 
     - Reading
-        - `(loop (print (eval (print))))`
-
+        - `(loop (print (eval (read))))`
     - Evaluation
         - "There is no real distinction between read-time, compile-time, and runtime. You can compile or run code while reading, read or run code while compiling, and read or compile code at runtime. Running code at read-time lets users reprogram Lisp's syntax; running code at compile-time is the basis of macros; compiling at runtime is the basis of Lisp's use as an extension language in programs like Emacs; and reading at runtime enables programs to communicate using s-expressions, an idea recently reinvented as XML."
 
@@ -137,18 +134,13 @@ Items 1 through 10 below represent each week of the quarter. There will be two 8
 
     - Anatomy of a macro
         - `macroexpand` and `macroexpand-1`
-
     - How to write macros
         - Backquote
         - Gensym
         - Implicit args
-
     - Common traps
-
     - Idiomatic macros
-
     - When should I use macros?
-
     - examples of macros in Clojure core
         - The whole threading family: `->`, `->>`, `cond->`, `some->`, `as->` etc
 
@@ -164,7 +156,9 @@ Items 1 through 10 below represent each week of the quarter. There will be two 8
         - Notifications - Watches / Validators
     - Refs - Software Transactional Memory
     - Interop with Java primitives
+
     - Lab: Bitcore and BitcoinJ interop!
+
     - **Fourth PSET** on immutable data and concurrency! Due Friday of week 9.
 
 8. More concurrency: core.async!
@@ -181,13 +175,11 @@ Items 1 through 10 below represent each week of the quarter. There will be two 8
     - Java
         - Calling Java from Clojure
         - Calling Clojure from Java
-
     - Javascript
         - Google Closure Modules
         - Calling Javascript from Clojure
         - Calling Clojure from Javascript
         - Externs!
-
     - How to interop mutable, outside code with Clojure
     - Tips and tricks for a smoother interop experience
     - Design APIs around data if possible! (e.g. not around chained function calls that return objects!) This is the Clojure way.
@@ -195,7 +187,7 @@ Items 1 through 10 below represent each week of the quarter. There will be two 8
     - Lab: work on final projects
 
 10. Wrapping up
-    - A deeper look at awesome Clojure projects in the wild OR an airing of the most famous Clojure talk ever given: [Simple Made Easy](http://www.infoq.com/presentations/Simple-Made-Easy)
 
+    - A deeper look at awesome Clojure projects in the wild OR an airing of the most famous Clojure talk ever given: [Simple Made Easy](http://www.infoq.com/presentations/Simple-Made-Easy)
     - **Project presentations!**
 
