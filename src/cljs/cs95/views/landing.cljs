@@ -45,5 +45,5 @@
    [course-description]
    [:hr]
    [administrivia]
-   [:h3 "Grading Policy"]])
+   #_[:h3 "Grading Policy"]])
 
