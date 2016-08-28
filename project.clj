@@ -1,6 +1,7 @@
 (defproject cs95 "0.1.0-SNAPSHOT"
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/clojurescript "1.9.225"]
+		 [org.clojure/core.async "0.2.385"]
                  [reagent "0.6.0-rc"]
                  [re-frame "0.8.0"]
                  [secretary "1.2.3"]
