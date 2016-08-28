@@ -30,6 +30,9 @@
   (defroute "/resources" []
     (re-frame/dispatch [:set-active-panel :resources]))
 
+  (defroute "/why-lisp" []
+    (re-frame/dispatch [:set-active-panel :why-lisp]))
+
 
   ;; --------------------
   (hook-browser-navigation!))

@@ -3,7 +3,7 @@
             [cs95.components.bootstrap :as bs]
             [cljsjs.markdown-it]))
 
-(def md (js/markdownit #js {:linkify true}))
+(def md (js/markdownit #js {:linkify true :html true}))
 (def render-md #(.render md %))
 
 (defn html-div [html-content]

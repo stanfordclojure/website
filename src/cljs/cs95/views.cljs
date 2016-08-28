@@ -14,6 +14,7 @@
 (defmethod panels :syllabus [] [markdown/view (slurp-dep "./doc/syllabus.md")])
 (defmethod panels :assignments [] [todo/view])
 (defmethod panels :resources [] [markdown/view (slurp-dep "./doc/resources.md")])
+(defmethod panels :why-lisp [] [markdown/view (slurp-dep "./doc/why_lisp.md")])
 (defmethod panels :default [] [:div])
 
 (def panel-data
