@@ -33,6 +33,9 @@
   (defroute "/why-lisp" []
     (re-frame/dispatch [:set-active-panel :why-lisp]))
 
+  (defroute "/candy" []
+    (re-frame/dispatch [:set-active-panel :candy]))
+
 
   ;; --------------------
   (hook-browser-navigation!))
