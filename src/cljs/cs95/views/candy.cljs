@@ -1,6 +1,5 @@
 (ns cs95.views.candy
-  (:require [re-frame.core :as re-frame]
-            [reagent.core :as r]
+  (:require [reagent.core :as r]
             [cs95.candy.life.view :as life-view]
             [cs95.candy.life.core :as life]
             [cs95.components.bootstrap :as bs]
@@ -8,20 +7,20 @@
   (:require-macros [cljs.core.async.macros :refer [go go-loop]]
                    [cs95.utils.helper :refer [slurp-dep]]))
 
-(defonce state (r/atom #{[-1 0] [0 0] [1 0]}))
+;; jank for now...
+(defonce cells (r/atom #{[-1 0] [0 0] [1 0]}))
+(defonce play? (r/atom false))
 
-(defn evolve [state]
-  (swap! state life/step))
+(defn evolve []
+  (swap! cells life/step))
 
-(defn play []
-  (go-loop []
-    (<! (timeout 100))
-    (swap! state life/step)
-    (recur)))
+(defn toggle-play []
+  (swap! play? not))
 
 (defn interesting-seed []
-  (reset! state #{[-1 0] [-1 1] [0 -1] [0 0] [1 0]}))
+  (reset! cells #{[-1 0] [-1 1] [0 -1] [0 0] [1 0]}))
 
+;; this code creates the page you see now. woooo magic.
 (defn explanation []
   [:div
    [:p "This core of this game of life implementation occurs in just 7 lines of code."]
@@ -34,10 +33,14 @@
 
 (defn view []
   [:div
-   [life-view/grid state]
+   [life-view/grid cells]
    [:br]
-   [bs/Button {:on-click play} "Start Simulation"]
-   [bs/Button {:on-click interesting-seed} "Interesting..."]
+   [bs/Button {:bs-style "primary" :on-click toggle-play} (if @play? "Stop" "Start") "Simulation"]
+   [bs/Button {:bs-style "info" :on-click interesting-seed} "Interesting..."]
    [:hr]
    [explanation]])
 
+(go-loop []
+  (<! (timeout 100))
+  (when @play? (evolve))
+  (recur))
