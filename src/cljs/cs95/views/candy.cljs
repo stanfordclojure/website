@@ -3,7 +3,8 @@
             [cs95.candy.life.view :as life-view]
             [cs95.candy.life.core :as life]
             [cs95.components.bootstrap :as bs]
-            [cljs.core.async :as async :refer [timeout <!]])
+            [cljs.core.async :as async :refer [timeout <!]]
+            [cljsjs.highlight])
   (:require-macros [cljs.core.async.macros :refer [go go-loop]]
                    [cs95.utils.helper :refer [slurp-dep]]))
 
@@ -20,16 +21,19 @@
 (defn interesting-seed []
   (reset! cells #{[-1 0] [-1 1] [0 -1] [0 0] [1 0]}))
 
+(defn code [src]
+  [:pre [:code.clojure src]])
+
 ;; this code creates the page you see now. woooo magic.
 (defn explanation []
   [:div
    [:p "This core of this game of life implementation occurs in just 7 lines of code."]
    [:h3 "cs95.candy.life.core"]
-   [:pre (slurp-dep "src/cljs/cs95/candy/life/core.cljs")]
+   [code (slurp-dep "src/cljs/cs95/candy/life/core.cljs")]
    [:h3 "cs95.candy.life.view"]
-   [:pre (slurp-dep "src/cljs/cs95/candy/life/view.cljs")]
+   [code (slurp-dep "src/cljs/cs95/candy/life/view.cljs")]
    [:h3 "cs95.views.candy"]
-   [:pre (slurp-dep "src/cljs/cs95/views/candy.cljs")]])
+   [code (slurp-dep "src/cljs/cs95/views/candy.cljs")]])
 
 (defn view []
   [:div
