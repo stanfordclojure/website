@@ -8,7 +8,8 @@
                  [compojure "1.5.0"]
                  [yogthos/config "0.8"]
                  [ring "1.4.0"]
-                 [cljsjs/markdown-it "7.0.0-0"]]
+                 [cljsjs/markdown-it "7.0.0-0"]
+                 [cljsjs/highlight "9.5.0-0"]]
 
   :plugins [[lein-cljsbuild "1.1.3"]]
 
