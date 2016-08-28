@@ -39,7 +39,7 @@
   [:div
    [life-view/grid cells]
    [:br]
-   [bs/Button {:bs-style "primary" :on-click toggle-play} (if @play? "Stop" "Start") "Simulation"]
+   [bs/Button {:bs-style "primary" :on-click toggle-play} (if @play? "Stop" "Start") " Simulation"]
    [bs/Button {:bs-style "info" :on-click interesting-seed} "Interesting..."]
    [:hr]
    [explanation]])
@@ -48,3 +48,5 @@
   (<! (timeout 100))
   (when @play? (evolve))
   (recur))
+
+;; (.initHighlightingOnLoad js/hljs)

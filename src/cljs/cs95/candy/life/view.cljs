@@ -4,11 +4,15 @@
 
 ;; https://www.youtube.com/watch?v=dxLRQ0aKTOQ
 
+(defn gen-key []
+  (gensym "key-"))
+
 (defn grid [state]
   [:svg {:width 500
          :height 500
          :viewBox "-250 -250 500 500"}
    (for [[x y] @state]
+     ^{:key (gen-key)}
      [:rect {:width 20
              :height 20
              :x (* x 20)
