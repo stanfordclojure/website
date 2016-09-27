@@ -8,15 +8,19 @@ often! If you have any suggested resources, let me know and I'll add them!
 
 ---
 
-### Suggested readings:
+### Suggested readings and papers:
 - [Paul Graham: Lisp as a secret weapon](http://www.paulgraham.com/avg.html)
 - [Paul Graham: Notable characteristics of Lisp](http://www.paulgraham.com/diff.html)
 - [Communicating Sequential Processes by C.A.R. Hoare](http://spinroot.com/courses/summer/Papers/hoare_1978.pdf)
 - [Structural Sharing: Clojure's immutable data structures](http://hypirion.com/musings/understanding-persistent-vector-pt-1)
 - [David Nolen's blog (advanced!)](http://swannodette.github.io/)
+- [Roots of Lisp](http://www.paulgraham.com/rootsoflisp.html)
+
+
 
 ### Suggested resources:
 - [Clojurescript Cheatsheet](http://cljs.info/cheatsheet/)
+- [ClojureScript/Javascript Synonyms](https://kanaka.github.io/clojurescript/web/synonym.html)
 - [4clojure](https://www.4clojure.com/problems)
 - [Clojure Toolbox (list of clj/cljs libraries)](http://www.clojure-toolbox.com/)
 - [ClojureWerkz](http://clojurewerkz.org/)

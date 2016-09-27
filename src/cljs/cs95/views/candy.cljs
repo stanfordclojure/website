@@ -4,7 +4,9 @@
             [cs95.candy.life.core :as life]
             [cs95.components.bootstrap :as bs]
             [cljs.core.async :as async :refer [timeout <!]]
-            [cljsjs.highlight])
+            [cljsjs.highlight]
+
+            [cs95.candy.mandelbrot.core :as mandelbrot])
   (:require-macros [cljs.core.async.macros :refer [go go-loop]]
                    [cs95.utils.helper :refer [slurp-dep]]))
 
@@ -42,11 +44,16 @@
    [bs/Button {:bs-style "primary" :on-click toggle-play} (if @play? "Stop" "Start") " Simulation"]
    [bs/Button {:bs-style "info" :on-click interesting-seed} "Interesting..."]
    [:hr]
-   [explanation]])
+   [explanation]
+   [:hr]
+   [:canvas#candy-canvas {:style {:width 600 :height 400 :border "1px solid black"}}]
+   [:br]
+   [bs/Button {:bs-style "primary" :on-click mandelbrot/dostuff} "Draw Mandelbrot Set (slow)"]])
 
 (go-loop []
-  (<! (timeout 100))
+  (<! (timeout 40))
   (when @play? (evolve))
   (recur))
 
 ;; (.initHighlightingOnLoad js/hljs)
+

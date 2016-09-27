@@ -10,10 +10,10 @@
 (defn grid [state]
   [:svg {:width 500
          :height 500
-         :viewBox "-250 -250 500 500"}
+         :viewBox "-450 -450 700 700"}
    (for [[x y] @state]
      ^{:key (gen-key)}
-     [:rect {:width 20
-             :height 20
-             :x (* x 20)
-             :y (* y 20)}])])
+     [:rect {:width 10
+             :height 10
+             :x (* x 10)
+             :y (* y 10)}])])

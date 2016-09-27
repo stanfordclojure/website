@@ -1,7 +1,7 @@
 (defproject cs95 "0.1.0-SNAPSHOT"
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/clojurescript "1.9.225"]
-		 [org.clojure/core.async "0.2.385"]
+                 [org.clojure/core.async "0.2.385"]
                  [reagent "0.6.0-rc"]
                  [re-frame "0.8.0"]
                  [secretary "1.2.3"]
@@ -10,7 +10,8 @@
                  [yogthos/config "0.8"]
                  [ring "1.4.0"]
                  [cljsjs/markdown-it "7.0.0-0"]
-                 [cljsjs/highlight "9.5.0-0"]]
+                 [cljsjs/highlight "9.5.0-0"]
+                 [rm-hull/monet "0.3.0"]]
 
   :plugins [[lein-cljsbuild "1.1.3"]]
 
