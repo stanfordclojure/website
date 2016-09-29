@@ -24,6 +24,9 @@
   (defroute "/syllabus" []
     (re-frame/dispatch [:set-active-panel :syllabus]))
 
+  (defroute "/lectures" []
+    (re-frame/dispatch [:set-active-panel :lectures]))
+
   (defroute "/assignments" []
     (re-frame/dispatch [:set-active-panel :assignments]))
 
@@ -35,6 +38,9 @@
 
   (defroute "/candy" []
     (re-frame/dispatch [:set-active-panel :candy]))
+
+  (defroute "/candy/:item" [item]
+    (re-frame/dispatch [:set-active-panel [:candy (keyword item)]]))
 
 
   ;; --------------------

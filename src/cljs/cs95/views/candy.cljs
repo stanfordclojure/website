@@ -1,59 +1,46 @@
 (ns cs95.views.candy
   (:require [reagent.core :as r]
-            [cs95.candy.life.view :as life-view]
-            [cs95.candy.life.core :as life]
+            [cs95.candy.life.view :as life]
+            [cs95.candy.mandelbrot.view :as mandelbrot]
             [cs95.components.bootstrap :as bs]
-            [cljs.core.async :as async :refer [timeout <!]]
-            [cljsjs.highlight]
-
-            [cs95.candy.mandelbrot.core :as mandelbrot])
+            [cs95.views.not-found :as not-found]
+            [cljs.core.async :as async :refer [timeout <!]])
   (:require-macros [cljs.core.async.macros :refer [go go-loop]]
-                   [cs95.utils.helper :refer [slurp-dep]]))
+                   [cs95.utils.helper :refer [slurp-dep]]
+                   [cs95.utils.re-frame :refer [with-subs]]))
 
-;; jank for now...
-(defonce cells (r/atom #{[-1 0] [0 0] [1 0]}))
-(defonce play? (r/atom false))
+(defmulti candy identity)
+(defmethod candy :life [] [life/view])
+(defmethod candy :mandelbrot [] [mandelbrot/view])
+(defmethod candy :default [] [not-found/view])
 
-(defn evolve []
-  (swap! cells life/step))
+(def candies [{:event-key :life :title "Game of Life"}
+              {:event-key :mandelbrot :title "Mandelbrot Set"}])
 
-(defn toggle-play []
-  (swap! play? not))
+(defn ->breadcrumb [-name]
+  {:name -name})
 
-(defn interesting-seed []
-  (reset! cells #{[-1 0] [-1 1] [0 -1] [0 0] [1 0]}))
+(defn ->bc [bc -name]
+  (let [prefix (:href (last bc) "#")
+        href (str prefix "/" (name -name))]
+    (conj bc {:name -name :href href})))
 
-(defn code [src]
-  [:pre [:code.clojure src]])
-
-;; this code creates the page you see now. woooo magic.
-(defn explanation []
+(defn show-candy [path]
   [:div
-   [:p "This core of this game of life implementation occurs in just 7 lines of code."]
-   [:h3 "cs95.candy.life.core"]
-   [code (slurp-dep "src/cljs/cs95/candy/life/core.cljs")]
-   [:h3 "cs95.candy.life.view"]
-   [code (slurp-dep "src/cljs/cs95/candy/life/view.cljs")]
-   [:h3 "cs95.views.candy"]
-   [code (slurp-dep "src/cljs/cs95/views/candy.cljs")]])
+   [bs/breadcrumb (reduce ->bc [] path)]
+   [candy (last path)]])
+
+(defn list-candy [{:keys [event-key title]}]
+  [bs/ListGroupItem {:href (str "#/candy/" (name event-key))} title])
+(defn list-candies []
+  [:div
+   [:h1.page-header "Choose your candy"]
+   (into [bs/ListGroup] (map list-candy candies))])
 
 (defn view []
-  [:div
-   [life-view/grid cells]
-   [:br]
-   [bs/Button {:bs-style "primary" :on-click toggle-play} (if @play? "Stop" "Start") " Simulation"]
-   [bs/Button {:bs-style "info" :on-click interesting-seed} "Interesting..."]
-   [:hr]
-   [explanation]
-   [:hr]
-   [:canvas#candy-canvas {:style {:width 600 :height 400 :border "1px solid black"}}]
-   [:br]
-   [bs/Button {:bs-style "primary" :on-click mandelbrot/dostuff} "Draw Mandelbrot Set (slow)"]])
-
-(go-loop []
-  (<! (timeout 40))
-  (when @play? (evolve))
-  (recur))
-
-;; (.initHighlightingOnLoad js/hljs)
+  (with-subs [active-panel [:active-panel]]
+    [:div
+     (if (coll? active-panel)
+       [show-candy active-panel]
+       [list-candies])]))
 

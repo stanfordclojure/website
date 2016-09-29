@@ -17,7 +17,8 @@
    "Table"
    "Panel"
    "ListGroup" "ListGroupItem"
-   "Alert"])
+   "Alert"
+   "Breadcrumb" "Breadcrumb.Item"])
 
 (defn vspace [height]
   [:div {:style {:height height}}])
@@ -25,3 +26,9 @@
 (defn hspace [width]
   [:div {:style {:width width :display "inline-block"}}])
 
+(defn breadcrumb-item [{:keys [name href active]}]
+  [Breadcrumb.Item {:href href :active active} name])
+
+(defn breadcrumb [items]
+  (let [eyes (update-in items [((comp dec count) items)] assoc :active true)]
+    (into [Breadcrumb] (map breadcrumb-item eyes))))
