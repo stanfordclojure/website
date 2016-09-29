@@ -7,7 +7,7 @@
   (map + c1 c2))
 
 (defn multiply
-  "Complex Multipication"
+  "Complex Multiplication"
   [[real-a imag-a] [real-b imag-b]]
   [(- (* real-a real-b)
       (* imag-a imag-b))
@@ -16,7 +16,7 @@
       (* imag-a real-b))])
 
 (defn abs
-  "Complex Absulute Value"
+  "Complex Absolute Value"
   [[real imag]]
   (js/Math.sqrt
     (+ (* real real)

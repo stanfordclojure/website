@@ -3,8 +3,7 @@
             [cs95.candy.life.core :as life]
             [cs95.components.bootstrap :as bs]
             [cs95.components.code :as code]
-            [cljs.core.async :as async :refer [timeout <!]]
-            [cljsjs.highlight])
+            [cljs.core.async :as async :refer [timeout <!]])
   (:require-macros [cljs.core.async.macros :refer [go go-loop]]
                    [cs95.utils.helper :refer [slurp-dep]]
                    [cs95.utils.re-frame :refer [with-subs]]))
