@@ -25,7 +25,7 @@
 (def nav-data
   [{:event-key :home :href "#/" :title "Overview"}
    {:event-key :syllabus :href "#/syllabus" :title "Syllabus"}
-   {:event-key :lectures :href "#/lectures" :title "Lectures"}
+   #_{:event-key :lectures :href "#/lectures" :title "Lectures"}
    #_{:event-key :assignments :href "#/assignments" :title "Assignments"}
    {:event-key :resources :href "#/resources" :title "Resources"}
    {:event-key :candy :href "#/candy" :title "Candy"}])
