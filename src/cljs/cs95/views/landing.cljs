@@ -34,7 +34,7 @@
 
 (defn view []
   [:div
-   [alert/show
+   #_[alert/show
     {:bs-style 'danger}
     [:div
      [:p {:style {:font-size 30}}
