@@ -32,3 +32,19 @@
 (defn breadcrumb [items]
   (let [eyes (update-in items [((comp dec count) items)] assoc :active true)]
     (into [Breadcrumb] (map breadcrumb-item eyes))))
+
+(defn table-cell [data]
+  (into [:tr] (map #(identity [:th %]) data)))
+
+(defn table-head [data]
+  [:thead
+   [table-cell data]])
+
+(defn table-body [data]
+  (into [:tbody] (map #(identity [table-cell %]) data)))
+
+(defn table [head-data body-data opts]
+  [Table opts
+   [table-head head-data]
+   [table-body body-data]])
+

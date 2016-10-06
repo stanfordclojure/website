@@ -8,6 +8,7 @@
             [cs95.views.candy :as candy]
             [cs95.views.landing :as landing]
             [cs95.views.lectures :as lectures]
+            [cs95.views.syllabus :as syllabus]
             [cs95.views.markdown :as markdown])
   (:require-macros [cs95.utils.re-frame :refer [with-subs]]
                    [cs95.utils.helper :refer [slurp-dep]]))
@@ -15,9 +16,9 @@
 (defmulti panels #(if (coll? %) (first %) %)) ;; identity
 (defmethod panels :candy [] [candy/view])
 (defmethod panels :home [] [landing/view])
-(defmethod panels :syllabus [] [markdown/view (slurp-dep "./doc/syllabus.md")])
+(defmethod panels :syllabus [] #_[syllabus/view] [markdown/view (slurp-dep "./doc/syllabus.md")])
 (defmethod panels :lectures [] [lectures/view])
-(defmethod panels :assignments [] [todo/view])
+(defmethod panels :assignments [] [markdown/view (slurp-dep "./doc/assignments/pset1.md")])
 (defmethod panels :resources [] [markdown/view (slurp-dep "./doc/resources.md")])
 (defmethod panels :why-lisp [] [markdown/view (slurp-dep "./doc/why_lisp.md")])
 (defmethod panels :default [] [not-found/view])
@@ -26,7 +27,7 @@
   [{:event-key :home :href "#/" :title "Overview"}
    {:event-key :syllabus :href "#/syllabus" :title "Syllabus"}
    #_{:event-key :lectures :href "#/lectures" :title "Lectures"}
-   #_{:event-key :assignments :href "#/assignments" :title "Assignments"}
+   {:event-key :assignments :href "#/assignments" :title "Assignments"}
    {:event-key :resources :href "#/resources" :title "Resources"}
    {:event-key :candy :href "#/candy" :title "Candy"}])
 
