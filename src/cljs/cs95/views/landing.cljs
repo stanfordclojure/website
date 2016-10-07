@@ -30,7 +30,7 @@
     [:p "Location: Bldg. 160 Rm. 319"]]
    [bs/Col {:md 6}
     [:h3 "Office Hours"]
-    [:p "TBD"]]])
+    [:p "Allan Jiang: 1-3pm on Monday @ Arrillaga Dining (or by appointment)"]]])
 
 (defn view []
   [:div

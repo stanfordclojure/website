@@ -30,6 +30,9 @@
   (defroute "/assignments" []
     (re-frame/dispatch [:set-active-panel :assignments]))
 
+  (defroute "/assignments/:item" [item]
+    (re-frame/dispatch [:set-active-panel [:assignments (keyword item)]]))
+
   (defroute "/resources" []
     (re-frame/dispatch [:set-active-panel :resources]))
 

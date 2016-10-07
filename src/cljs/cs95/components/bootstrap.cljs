@@ -43,8 +43,11 @@
 (defn table-body [data]
   (into [:tbody] (map #(identity [table-cell %]) data)))
 
-(defn table [head-data body-data opts]
-  [Table opts
-   [table-head head-data]
-   [table-body body-data]])
+(defn table
+  ([head-data body-data]
+   [table {} head-data body-data])
+  ([opts head-data body-data]
+   [Table opts
+    [table-head head-data]
+    [table-body body-data]]))
 

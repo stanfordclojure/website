@@ -6,6 +6,7 @@
             [cs95.views.todo :as todo]
             [cs95.views.not-found :as not-found]
             [cs95.views.candy :as candy]
+            [cs95.views.assignments :as assignments]
             [cs95.views.landing :as landing]
             [cs95.views.lectures :as lectures]
             [cs95.views.syllabus :as syllabus]
@@ -16,9 +17,9 @@
 (defmulti panels #(if (coll? %) (first %) %)) ;; identity
 (defmethod panels :candy [] [candy/view])
 (defmethod panels :home [] [landing/view])
-(defmethod panels :syllabus [] #_[syllabus/view] [markdown/view (slurp-dep "./doc/syllabus.md")])
+(defmethod panels :syllabus [] [syllabus/view] #_[markdown/view (slurp-dep "./doc/syllabus.md")])
 (defmethod panels :lectures [] [lectures/view])
-(defmethod panels :assignments [] [markdown/view (slurp-dep "./doc/assignments/pset1.md")])
+(defmethod panels :assignments [] [assignments/view] #_[markdown/view (slurp-dep "./doc/assignments/pset1.md")])
 (defmethod panels :resources [] [markdown/view (slurp-dep "./doc/resources.md")])
 (defmethod panels :why-lisp [] [markdown/view (slurp-dep "./doc/why_lisp.md")])
 (defmethod panels :default [] [not-found/view])

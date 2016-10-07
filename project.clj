@@ -11,7 +11,8 @@
                  [ring "1.4.0"]
                  [cljsjs/markdown-it "7.0.0-0"]
                  [cljsjs/highlight "9.5.0-0"]
-                 [rm-hull/monet "0.3.0"]]
+                 [rm-hull/monet "0.3.0"]
+                 [com.andrewmcveigh/cljs-time "0.4.0"]]
 
   :plugins [[lein-cljsbuild "1.1.3"]]
 
