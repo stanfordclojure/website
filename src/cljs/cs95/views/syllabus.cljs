@@ -35,9 +35,9 @@
 "Bottom-Up Programming"
 "Lab"
 
-"Polymorphism"
-"Clojure's Builtin Protocols
+"Polymorphism
 - <mark>Assignment 1 due!</mark>"
+"Clojure's Builtin Protocols"
 
 "Reading, Evaluation, and Macros"
 "More on macros + Lab"

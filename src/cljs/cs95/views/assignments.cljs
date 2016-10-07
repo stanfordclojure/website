@@ -14,7 +14,7 @@
 (defmethod candy :pset1 [] [markdown/view (slurp-dep "./doc/assignments/pset1.md")])
 (defmethod candy :default [] [not-found/view])
 
-(def candies [{:event-key :pset1 :title "1. Write some Clojure!"}])
+(def candies [{:event-key :pset1 :title "1. Intro to Clojure!"}])
 
 (defn ->breadcrumb [-name]
   {:name -name})
