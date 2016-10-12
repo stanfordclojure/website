@@ -32,7 +32,8 @@
 - [Slides](/lectures?n=4)
 - [Assignment 1](#/assignments/pset1) Released!"
 
-"Bottom-Up Programming"
+"Bottom-Up Programming
+- [Slides](/lectures?n=5)"
 "Lab"
 
 "Polymorphism

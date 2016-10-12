@@ -33,17 +33,14 @@
   (defroute "/assignments/:item" [item]
     (re-frame/dispatch [:set-active-panel [:assignments (keyword item)]]))
 
-  (defroute "/resources" []
-    (re-frame/dispatch [:set-active-panel :resources]))
-
-  (defroute "/why-lisp" []
-    (re-frame/dispatch [:set-active-panel :why-lisp]))
-
   (defroute "/candy" []
     (re-frame/dispatch [:set-active-panel :candy]))
 
   (defroute "/candy/:item" [item]
     (re-frame/dispatch [:set-active-panel [:candy (keyword item)]]))
+
+  (defroute "/doc/:item" [item]
+    (re-frame/dispatch [:set-active-panel [:doc item]]))
 
 
   ;; --------------------
