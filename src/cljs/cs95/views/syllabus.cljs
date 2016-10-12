@@ -33,7 +33,10 @@
 - [Assignment 1](#/assignments/pset1) Released!"
 
 "Bottom-Up Programming
-- [Slides](/lectures?n=5)"
+- [Slides](/lectures?n=5)
+- New and improved environment setup guides!
+  - [vim setup guide](#/doc/fireplace)
+  - [counterclockwise setup guide](#/doc/counterclockwise)"
 "Lab"
 
 "Polymorphism

@@ -8,6 +8,10 @@ often! If you have any suggested resources, let me know and I'll add them!
 
 ---
 
+### Development Environment Setup
+- [vim](#/doc/fireplace)
+- [counterclockwise](#/doc/counterclockwise)
+
 ### Suggested readings and papers:
 - [Paul Graham: Lisp as a secret weapon](http://www.paulgraham.com/avg.html)
 - [Paul Graham: Notable characteristics of Lisp](http://www.paulgraham.com/diff.html)
