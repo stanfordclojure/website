@@ -12,9 +12,11 @@
 
 (defmulti candy identity)
 (defmethod candy :pset1 [] [markdown/view (slurp-dep "./doc/assignments/pset1.md")])
+(defmethod candy :pset2 [] [markdown/view (slurp-dep "./doc/assignments/pset2.md")])
 (defmethod candy :default [] [not-found/view])
 
-(def candies [{:event-key :pset1 :title "1. Intro to Clojure!"}])
+(def candies [{:event-key :pset1 :title "1. Intro to Clojure!"}
+              {:event-key :pset2 :title "2. Do something: Implement Poker!"}])
 
 (defn ->breadcrumb [-name]
   {:name -name})
