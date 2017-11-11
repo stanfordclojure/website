@@ -10,7 +10,7 @@
 
 
 (defn dev-setup []
-  (when config/debug?
+  (when ^boolean config/debug?
     (enable-console-print!)
     (println "dev mode")
     (devtools/install!)))

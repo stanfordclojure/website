@@ -41,3 +41,7 @@ often! If you have any suggested resources, let me know and I'll add them!
 - [Riemann](http://riemann.io/)
 - [Netrunner](https://github.com/mtgred/netrunner)
 
+### Macros
+- [extras](http://blog.jayfields.com/2011/02/clojure-and.html)
+- https://aphyr.com/posts/305-clojure-from-the-ground-up-macros
+- http://www.learningclojure.com/2010/09/clojure-macro-tutorial-part-i-getting.html

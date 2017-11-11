@@ -40,16 +40,21 @@
 "Lab"
 
 "Polymorphism
-- <mark>Assignment 1 due!</mark>"
-"Clojure's Builtin Protocols"
+- <mark>Assignment 1 due!</mark>
+- [Slides](/lectures?n=7)"
+"Clojure's Builtin Protocols
+- [Assignment 2](#/assignments/pset1) Released!
+- [Slides](/lectures?n=8)"
 
 "Reading, Evaluation, and Macros"
-"More on macros + Lab"
+"More on macros + Lab
+- <mark>Assignment 2 &mdash; Part 1 due!</mark>"
 
 "Concurrency/Parallelism: Tasks"
 "Concurrency/Parallelism: Identity/State/Value"
 
-"Communicating Sequential Processes: `core.async`"
+"Communicating Sequential Processes: `core.async`
+- <mark>Assignment 2 &mdash; Part 2 due!</mark>"
 "LAB"
 
 "Interop: Java"
