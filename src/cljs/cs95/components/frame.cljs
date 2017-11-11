@@ -5,7 +5,7 @@
   [bs/NavItem opts title])
 
 (defn navbar [nav-items active-panel]
-  [bs/Navbar
+  [bs/Navbar {:inverse true}
    [bs/Navbar.Header
     [bs/Navbar.Brand
      [:a {:href "#"} "StanfordClojure"]]

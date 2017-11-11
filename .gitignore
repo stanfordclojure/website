@@ -16,3 +16,6 @@ pom.xml.asc
 /resources/public/js/compiled
 out
 *swp
+
+node_modules
+.sass-cache

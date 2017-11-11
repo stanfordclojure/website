@@ -1,0 +1,33 @@
+{
+  "name": "cs43-homepage",
+  "version": "1.0.0",
+  "description": "Homepage for CS43: Functional Programming in Clojure at Stanford University",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stanfordclojure/website.git"
+  },
+  "keywords": [
+    "Stanford",
+    "Clojure",
+    "ClojureScript",
+    "Functional"
+  ],
+  "author": "Allan Jiang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stanfordclojure/website/issues"
+  },
+  "homepage": "https://github.com/stanfordclojure/website#readme",
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "bootstrap-sass": "^3.3.7"
+  }
+}
