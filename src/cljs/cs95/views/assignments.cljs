@@ -15,8 +15,8 @@
 (defmethod candy :pset2 [] [markdown/view (slurp-dep "./doc/assignments/pset2.md")])
 (defmethod candy :default [] [not-found/view])
 
-(def candies [{:event-key :pset1 :title "1. Intro to Clojure!"}
-              {:event-key :pset2 :title "2. Do something: Implement Poker!"}])
+(def candies [] #_[{:event-key :pset1 :title "1. Intro to Clojure!"}
+                   {:event-key :pset2 :title "2. Do something: Implement Poker!"}])
 
 (defn ->breadcrumb [-name]
   {:name -name})
@@ -33,10 +33,13 @@
 
 (defn list-candy [{:keys [event-key title]}]
   [bs/ListGroupItem {:href (str "#/assignments/" (name event-key))} title])
+
 (defn list-candies []
   [:div
    [:h1.page-header "Assignments"]
-   (into [bs/ListGroup] (map list-candy candies))])
+   (if (not (empty? candies))
+     (into [bs/ListGroup] (map list-candy candies))
+     [:p "First assignment coming soon!"])])
 
 (defn view []
   (with-subs [active-panel [:active-panel]]

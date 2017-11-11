@@ -7,7 +7,8 @@
 (def render-md #(.render md %))
 
 (defn html-div [html-content]
-  [:div {"dangerouslySetInnerHTML" #js {:__html html-content}}])
+  [:div {"dangerouslySetInnerHTML" #js {:__html html-content}
+         :style {:padding-bottom 50}}])
 
 (defn md-div [markdown]
   [html-div (render-md markdown)])
