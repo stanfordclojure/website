@@ -17,7 +17,7 @@
 
 (def class-days
   (let [dates (recurring-event {:interval (ti/weeks 1)
-                                :dates [(ti/date-time 2018 1 9) (ti/date-time 2018 3 16)]})]
+                                :dates [(ti/date-time 2018 1 9) (ti/date-time 2018 1 11)]})]
     (map day->str dates)))
 
 (def topics (mapv (fn [t] [md/md-div t])
