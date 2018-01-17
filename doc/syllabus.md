@@ -1,19 +1,19 @@
-Motivation
-
----
-
-Introduction and Getting Started
+Motivation: Why CS 43?
 - [Slides](/lectures?n=1)
 
 ---
 
-Intro to `clojure.core` + Quick Lab
+Intro to `clojure.core`
 - [Slides](/lectures?n=2)
 
 ---
 
-Functional Programming + Lab
+Programming in Expressions + Getting Started
 - [Slides](/lectures?n=3)
+
+---
+
+Functional Programming + Lab
 
 ---
 
