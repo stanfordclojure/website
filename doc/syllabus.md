@@ -2,15 +2,18 @@ Motivation
 
 ---
 
-Getting Started
+Introduction and Getting Started
+- [Slides](/lectures?n=1)
 
 ---
 
 Intro to `clojure.core` + Quick Lab
+- [Slides](/lectures?n=2)
 
 ---
 
 Functional Programming + Lab
+- [Slides](/lectures?n=3)
 
 ---
 

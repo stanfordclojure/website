@@ -49,7 +49,9 @@
     [:p "Location: Bldg. 200 Rm. 030"]]
    [bs/Col {:md 6}
     [:h3 "Office Hours"]
-    [:p "TBD"]]])
+    [:p "Allan: 11am-1pm, on Wednesdays at Florence Moore Dining (Paloma)"]
+    [:p "Adi: 11am-1pm, on Mondays at Arrillaga Dining (downstairs tables)"]
+    [:p "Or by appointment"]]])
 
 (defn view []
   [:div
