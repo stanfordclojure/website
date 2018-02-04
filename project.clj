@@ -6,6 +6,7 @@
                  [re-frame "0.8.0"]
                  [secretary "1.2.3"]
                  [cljsjs/react-bootstrap "0.30.2-0"]
+                 [cljs-ajax "0.7.3"]
                  [compojure "1.5.0"]
                  [yogthos/config "0.8"]
                  [ring "1.4.0"]

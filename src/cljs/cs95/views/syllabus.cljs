@@ -3,8 +3,10 @@
             [cs95.components.alert :as alert]
             [cs95.components.bootstrap :as bs]
             [cs95.components.markdown :as md]
+            [cs95.subs :refer [reg-sub-raw]]
             [cljs-time.core :as ti]
-            [cljs-time.format :as tf])
+            [cljs-time.format :as tf]
+            [ajax.core :refer [GET POST]])
   (:require-macros [cs95.utils.helper :refer [slurp-dep]]))
 
 (defn recurring-event [{:keys [interval dates]}]
@@ -20,17 +22,38 @@
                                 :dates [(ti/date-time 2018 1 9) (ti/date-time 2018 1 11)]})]
     (map day->str dates)))
 
-(def topics (mapv (fn [t] [md/md-div t])
-                  (-> (slurp-dep "doc/syllabus.md")
-                    (.split "---")
-                    (.map #(.trim %)))))
+;; handlers and subs
+(re-frame/reg-event-db
+  :fetched/syllabus
+  (fn [db [_ md]]
+    (assoc db ::syllabus md)))
+
+(reg-sub-raw
+  ::syllabus
+  {:query (fn []
+            (GET "/doc/syllabus.md"
+                 {:handler #(re-frame/dispatch [:fetched/syllabus %])}))
+   :path [::syllabus]})
+
+(re-frame/reg-sub
+  ::topics
+  :<- [::syllabus]
+  (fn [md]
+    (when-let [topics (some-> md
+                              (.split "---")
+                              (.map #(.trim %)))]
+      (mapv (fn [t] [md/md-div t]) topics))))
+
 
 (defn syllabus []
-  [bs/table (zipmap [:striped :bordered] (repeat true))
-   ["Week" "Date" "Topic"]
-   (mapv vector (interleave (map inc (range)) (repeat "")) class-days topics)])
+  (when-let [topics @(re-frame/subscribe [::topics])]
+    [bs/table (zipmap [:striped :bordered] (repeat true))
+     ["Week" "Date" "Topic"]
+     (mapv vector (interleave (map inc (range)) (repeat "")) class-days topics)]))
 
 (defn view []
   [:div
    [:h1.page-header "Syllabus"]
    [syllabus]])
+
+
