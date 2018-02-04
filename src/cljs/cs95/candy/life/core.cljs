@@ -14,6 +14,7 @@
              :when (or (= n 3) (and (= n 2) (cells loc)))]
          loc)))
 
+
 ;; ;; compute neighbors
 ;; (defn neighbors [[x y]]
 ;;   (for [dx [-1 0 1]

@@ -13,31 +13,36 @@ Programming in Expressions + Getting Started
 
 ---
 
-Functional Programming + Lab
+Functional Abstractions
+- [Slides](/lectures?n=4)
 
 ---
 
-Bottom-Up Programming
+Bottom-Up/Data-Driven Programming -- Scrabble
+- [Slides](/lectures?n=5)
 
 ---
 
-Lab
+Live Coding -- Scrabble
+
 
 ---
 
 Polymorphism
-
----
-
-Clojure's Builtin Protocols
+- [Slides](/lectures?n=7)
 
 ---
 
 Reading, Evaluation, and Macros
+- [Slides](/lectures?n=8)
 
 ---
 
-More on macros + Lab
+Macro Magic + `clojure.spec`
+
+---
+
+Make a Lisp!
 
 ---
 
@@ -53,7 +58,7 @@ Communicating Sequential Processes: `core.async`
 
 ---
 
-LAB
+Coding Lab
 
 ---
 

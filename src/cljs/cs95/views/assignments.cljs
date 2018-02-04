@@ -11,12 +11,12 @@
                    [cs95.utils.re-frame :refer [with-subs]]))
 
 (defmulti candy identity)
-(defmethod candy :pset1 [] [markdown/view (slurp-dep "./doc/assignments/pset1.md")])
-(defmethod candy :pset2 [] [markdown/view (slurp-dep "./doc/assignments/pset2.md")])
+(defmethod candy :pset1 [] [markdown/view (slurp-dep "https://raw.githubusercontent.com/acganesh/cs43-pset1/master/README.md")])
+(defmethod candy :pset2 [] [markdown/view (slurp-dep "https://raw.githubusercontent.com/stanfordclojure/pset2/master/README.md")])
 (defmethod candy :default [] [not-found/view])
 
-(def candies [] #_[{:event-key :pset1 :title "1. Intro to Clojure!"}
-                   {:event-key :pset2 :title "2. Do something: Implement Poker!"}])
+(def candies [{:event-key :pset1 :title "1. Intro to Clojure!"}
+              {:event-key :pset2 :title "2. Macros!"}])
 
 (defn ->breadcrumb [-name]
   {:name -name})
