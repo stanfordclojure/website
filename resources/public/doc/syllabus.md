@@ -39,10 +39,12 @@ Reading, Evaluation, and Macros
 ---
 
 Macro Magic + `clojure.spec`
+- [Slides](/lectures?n=9)
 
 ---
 
 Make a Lisp!
+- [Slides](/lectures?n=10)
 
 ---
 
