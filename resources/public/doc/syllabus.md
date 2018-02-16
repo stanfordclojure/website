@@ -43,16 +43,21 @@ Macro Magic + `clojure.spec`
 
 ---
 
-Make a Lisp!
+Roots of Lisp
 - [Slides](/lectures?n=10)
 
 ---
 
-Concurrency/Parallelism: Tasks
+Make a Lisp!
 
 ---
 
 Concurrency/Parallelism: Identity/State/Value
+- [Slides](/lectures?n=11)
+
+---
+
+Concurrency/Parallelism: Tasks
 
 ---
 
@@ -77,10 +82,6 @@ Bonus: ClojureScript + React.js
 ---
 
 Bonus: re-frame, react native
-
----
-
-Bonus: Simple Made Easy
 
 ---
 
