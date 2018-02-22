@@ -5,36 +5,57 @@ Motivation: Why CS 43?
 
 Intro to `clojure.core`
 - [Slides](/lectures?n=2)
+- [Recording](https://usermotif.com/viewer.html?rec=S1W1kCswM)
+  - Note: audio slightly out of sync since it was recorded separately
+  - audio is 18 seconds ahead
 
 ---
 
 Programming in Expressions + Getting Started
 - [Slides](/lectures?n=3)
+- [Recording](https://usermotif.com/viewer.html?rec=BJl-JJ0svM)
+  - Note: audio slightly out of sync since it was recorded separately
+  - audio is 39 seconds ahead
 
 ---
 
 Functional Abstractions
 - [Slides](/lectures?n=4)
+- [Recording](https://usermotif.com/viewer.html?rec=Bkzi6GAivz)
+  - Note: audio slightly out of sync since it was recorded separately
+  - audio is 15 seconds ahead
+  - Note: terminal recording did not seem to work
 
 ---
 
 Bottom-Up/Data-Driven Programming -- Scrabble
 - [Slides](/lectures?n=5)
+- [Recording](https://usermotif.com/viewer.html?rec=Sy7jaMAsPz)
+  - Note: audio slightly out of sync since it was recorded separately
+  - audio is 171 seconds behind
+
 
 ---
 
 Live Coding &mdash; Scrabble
+- [Recording](https://usermotif.com/viewer.html?rec=ByNjTM0swG)
+  - Note: audio slightly out of sync since it was recorded separately
 
 
 ---
 
 Polymorphism
 - [Slides](/lectures?n=7)
+- [Recording](https://usermotif.com/viewer.html?rec=rJSsazAowG)
+  - Note: audio slightly out of sync since it was recorded separately
+  - Note: terminal not recorded
 
 ---
 
 Reading, Evaluation, and Macros
 - [Slides](/lectures?n=8)
+- [Recording](https://usermotif.com/viewer.html?rec=HJIspMCowz)
+  - Note: audio is correctly synchronized!
 
 ---
 
@@ -58,6 +79,7 @@ Concurrency/Parallelism: Identity/State/Value
 ---
 
 Concurrency/Parallelism: Tasks
+- [Slides](/lectures?n=12)
 
 ---
 
