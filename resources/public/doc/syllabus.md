@@ -74,20 +74,22 @@ Make a Lisp!
 ---
 
 Concurrency/Parallelism: Identity/State/Value
-- [Slides](/lectures?n=11)
-
----
-
-Concurrency/Parallelism: Tasks
 - [Slides](/lectures?n=12)
 
 ---
 
-Communicating Sequential Processes: `core.async`
+Concurrency/Parallelism: Tasks
+- [Slides](/lectures?n=13)
 
 ---
 
-Coding Lab
+Communicating Sequential Processes: `core.async`
+- [Slides](/lectures?n=14)
+
+---
+
+Overview and Spec
+- [Slides](/lectures?n=15)
 
 ---
 
