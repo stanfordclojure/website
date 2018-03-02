@@ -93,6 +93,11 @@ Overview and Spec
 
 ---
 
+Generative Testing with `test.check`
+- [Slides](/lectures?n=16)
+
+---
+
 Interop: Java
 
 ---
@@ -107,6 +112,3 @@ Bonus: ClojureScript + React.js
 
 Bonus: re-frame, react native
 
----
-
-Bonus: You choose!
